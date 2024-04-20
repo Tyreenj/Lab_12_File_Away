@@ -32,16 +32,20 @@ public class Main
 
                 while(inFile.hasNextLine())
                 {
+                    //Keeps track of no. of lines
                     lineCounter++;
                     line = inFile.nextLine();
                     System.out.println(line);
+                    //Keeps track of no. of characters
                     character = character + line.length();
 
+                    //Keeps track of no. of words
                     words = words + line.split("\\s").length;
                 }
 
                 System.out.println();
 
+                //Gets the name of the file and prints it
                 try {
                     fileName = target.toFile().getName();
                     System.out.println("The name of the file is" +fileName);
